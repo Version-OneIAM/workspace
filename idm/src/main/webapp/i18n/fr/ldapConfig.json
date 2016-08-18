@@ -1,0 +1,37 @@
+{
+    "idmApp": {
+        "ldapConfig" : {
+            "home": {
+                "title": "LdapConfigs",
+                "createLabel": "Créer un nouveau LdapConfig",
+                "createOrEditLabel": "Créer ou éditer un LdapConfig",
+                "search": "Search for LdapConfig"
+            },
+            "created": "Un nouveau LdapConfig a été créé avec l'identifiant {{ param }}",
+            "updated": "Le LdapConfig avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le LdapConfig avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le LdapConfig {{ id }} ?"
+            },
+            "detail": {
+                "title": "LdapConfig"
+            },
+            "name": "Name",
+            "domainname": "Domainname",
+            "netbiosdomainname": "Netbiosdomainname",
+            "whenmanaged": "Whenmanaged",
+            "lastsynctime": "Lastsynctime",
+            "isdefault": "Isdefault",
+            "isdeleted": "Isdeleted",
+            "domainsid": "Domainsid",
+            "ipaddress": "Ipaddress",
+            "port": "Port",
+            "issecure": "Issecure",
+            "userbasedn": "Userbasedn",
+            "groupbasedn": "Groupbasedn",
+            "portype": "Portype",
+            "fetchstatus": "Fetchstatus"
+        }
+    }
+}
+

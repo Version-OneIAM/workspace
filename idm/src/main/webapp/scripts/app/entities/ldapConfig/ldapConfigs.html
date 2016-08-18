@@ -1,0 +1,80 @@
+<div>
+    <h2 translate="idmApp.ldapConfig.home.title">LDAP Connectors</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="ldapConfig.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="idmApp.ldapConfig.home.createLabel">Manage
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="idmApp.ldapConfig.name">Name</span></th>
+                    <th><span translate="idmApp.ldapConfig.password">Password</span></th>
+                    <th><span translate="idmApp.ldapConfig.domainname">Domainname</span></th>
+                    <!-- <th><span translate="idmApp.ldapConfig.netbiosdomainname">Netbiosdomainname</span></th> -->
+                    <!-- <span translate="idmApp.ldapConfig.whenmanaged">Whenmanaged</span></th> -->
+                    <!-- <th><span translate="idmApp.ldapConfig.lastsynctime">Lastsynctime</span></th> -->
+                    <!-- <th><span translate="idmApp.ldapConfig.isdefault">Isdefault</span></th> -->
+                    <!-- <th><span translate="idmApp.ldapConfig.isdeleted">Isdeleted</span></th> -->
+                    <!-- <th><span translate="idmApp.ldapConfig.domainsid">Domainsid</span></th> -->
+                    <th><span translate="idmApp.ldapConfig.ipaddress">Ipaddress</span></th>
+                    <th><span translate="idmApp.ldapConfig.port">Port</span></th>
+                    <th><span translate="idmApp.ldapConfig.issecure">Issecure</span></th>
+                    <th><span translate="idmApp.ldapConfig.userbasedn">Userbasedn</span></th>
+                    <th><span translate="idmApp.ldapConfig.groupbasedn">Groupbasedn</span></th>
+                    <!-- <th><span translate="idmApp.ldapConfig.portype">Portype</span></th> -->
+                    <!-- <th><span translate="idmApp.ldapConfig.fetchstatus">Fetchstatus</span></th> -->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ldapConfig in ldapConfigs track by ldapConfig.id">
+                    <td><a ui-sref="ldapConfig.detail({id:ldapConfig.id})">{{ldapConfig.id}}</a></td>
+                    <td>{{ldapConfig.name}}</td>
+                    <td>{{ldapConfig.domainname}}</td>
+                    <!-- <td>{{ldapConfig.isdefault}}</td> -->
+                    <td>{{ldapConfig.ipaddress}}</td>
+                    <td>{{ldapConfig.port}}</td>
+                    <td>{{ldapConfig.issecure}}</td>
+                    <td>{{ldapConfig.userbasedn}}</td>
+                    <td>{{ldapConfig.groupbasedn}}</td>
+                    <!-- 
+                    <td translate="{{'idmApp.PortTypesEnum.' + ldapConfig.portype}}">{{ldapConfig.portype}}</td> -->
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="ldapConfig.detail({id:ldapConfig.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ldapConfig.edit({id:ldapConfig.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ldapConfig.delete({id:ldapConfig.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+
+<div>
+    <h2><span translate="idmApp.ldapConfig.detail.title">LdapConfig</span> {{ldapConfig.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.password">Password</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.password}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.domainname">Domainname</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.domainname}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.isdefault">Isdefault</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.isdefault}}</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.ipaddress">Ipaddress</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.ipaddress}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.port">Port</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.port}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.issecure">Issecure</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.issecure}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.userbasedn">Userbasedn</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.userbasedn}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.groupbasedn">Groupbasedn</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ldapConfig.groupbasedn}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="idmApp.ldapConfig.portype">Portype</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'idmApp.PortTypesEnum.' + ldapConfig.portype}}">{{ldapConfig.portype}}</span>
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

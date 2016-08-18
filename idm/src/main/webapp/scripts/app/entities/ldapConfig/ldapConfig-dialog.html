@@ -1,0 +1,127 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myLdapConfigLabel" translate="idmApp.ldapConfig.home.createOrEditLabel">Create or Edit LdapConfig</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="ldapConfig.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="ldapConfig.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.password" for="field_password">Password</label>
+            <input type="password" class="form-control" name="password" id="field_password"
+                    ng-model="ldapConfig.password"
+                    required />
+            <div ng-show="editForm.password.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.password.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.domainname" for="field_domainname">Domainname</label>
+            <input type="text" class="form-control" name="domainname" id="field_domainname"
+                    ng-model="ldapConfig.domainname"
+                    required />
+            <div ng-show="editForm.domainname.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.domainname.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.isdefault" for="field_isdefault">Isdefault</label>
+            <input type="checkbox" class="form-control" name="isdefault" id="field_isdefault"
+                    ng-model="ldapConfig.isdefault"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.ipaddress" for="field_ipaddress">Ipaddress</label>
+            <input type="text" class="form-control" name="ipaddress" id="field_ipaddress"
+                    ng-model="ldapConfig.ipaddress"
+                    required />
+            <div ng-show="editForm.ipaddress.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.ipaddress.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.port" for="field_port">Port</label>
+            <input type="number" class="form-control" name="port" id="field_port"
+                    ng-model="ldapConfig.port"
+                    required />
+            <div ng-show="editForm.port.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.port.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.port.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.issecure" for="field_issecure">Issecure</label>
+            <input type="checkbox" class="form-control" name="issecure" id="field_issecure"
+                    ng-model="ldapConfig.issecure"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.userbasedn" for="field_userbasedn">Userbasedn</label>
+            <input type="text" class="form-control" name="userbasedn" id="field_userbasedn"
+                    ng-model="ldapConfig.userbasedn"
+                    required />
+            <div ng-show="editForm.userbasedn.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.userbasedn.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.groupbasedn" for="field_groupbasedn">Groupbasedn</label>
+            <input type="text" class="form-control" name="groupbasedn" id="field_groupbasedn"
+                    ng-model="ldapConfig.groupbasedn"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="idmApp.ldapConfig.portype" for="field_portype">Portype</label>
+            <select class="form-control" name="portype" ng-model="ldapConfig.portype" id="field_portype">
+                <option value="TCP" translate="idmApp.PortTypesEnum.TCP">TCP</option>
+                <option value="UDP" translate="idmApp.PortTypesEnum.UDP">UDP</option>
+            </select>
+        </div>
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+{
+    "main": {
+        "title": "Identity Management Solution!",
+        "subtitle": "Gibbor Technologies",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "For queries please drop us an email:",
+        "link": {
+            "contact": "support@gibbortech.com"
+        }
+        
+    }
+}

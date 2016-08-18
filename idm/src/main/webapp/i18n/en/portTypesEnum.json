@@ -1,0 +1,9 @@
+{
+    "idmApp": {
+        "PortTypesEnum" : {
+            "null": "",
+            "TCP": "TCP",
+            "UDP": "UDP"
+        }
+    }
+}

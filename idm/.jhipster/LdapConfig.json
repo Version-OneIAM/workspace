@@ -1,0 +1,101 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "domainname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "netbiosdomainname",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "whenmanaged",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "lastsynctime",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "isdefault",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "isdeleted",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "domainsid",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "ipaddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "port",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "issecure",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "userbasedn",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "groupbasedn",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "portype",
+            "fieldType": "PortTypesEnum",
+            "fieldValues": "TCP,UDP"
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "fetchstatus",
+            "fieldType": "FetchStatesEnum",
+            "fieldValues": "Unknown,FetchSuccessful,FetchFailed"
+        }
+    ],
+    "changelogDate": "20160228121901",
+    "dto": "no",
+    "service": "serviceImpl",
+    "pagination": "no"
+}

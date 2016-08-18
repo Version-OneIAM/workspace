@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity LdapConfig.
+    -->
+    <changeSet id="20160228121901" author="jhipster">
+        <createTable tableName="ldap_config">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="domainname" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="netbiosdomainname" type="varchar(255)"/>
+            
+            <column name="whenmanaged" type="date"/>
+            
+            <column name="lastsynctime" type="date"/>
+            
+            <column name="isdefault" type="bit"/>
+            
+            <column name="isdeleted" type="bit"/>
+            
+            <column name="domainsid" type="varchar(255)"/>
+            
+            <column name="ipaddress" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="port" type="integer">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="issecure" type="bit"/>
+            
+            <column name="userbasedn" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="groupbasedn" type="varchar(255)"/>
+            
+            <column name="portype" type="varchar(255)"/>
+            
+            <column name="fetchstatus" type="varchar(255)"/>
+            
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

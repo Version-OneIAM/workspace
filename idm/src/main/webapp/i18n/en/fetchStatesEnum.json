@@ -1,0 +1,10 @@
+{
+    "idmApp": {
+        "FetchStatesEnum" : {
+            "null": "",
+            "Unknown": "Unknown",
+            "FetchSuccessful": "FetchSuccessful",
+            "FetchFailed": "FetchFailed"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "idmApp": {
+        "ldapConfig" : {
+            "home": {
+                "title": "LDAP Connectors",
+                "createLabel": "Manage",
+                "createOrEditLabel": "Create or Edit",
+                "search": "Search for LdapConfig"
+            },
+            "created": "A new LdapConfig is created with identifier {{ param }}",
+            "updated": "A LdapConfig is updated with identifier {{ param }}",
+            "deleted": "A LdapConfig is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Ldap Connector {{ id }}?"
+            },
+            "detail": {
+                "title": "Ldap Connector Details"
+            },
+            "name": "Name",
+            "domainname": "Domain",
+            "netbiosdomainname": "netbios",
+            "whenmanaged": "Whenmanaged",
+            "lastsynctime": "Lastsynctime",
+            "isdefault": "Default",
+            "isdeleted": "Isdeleted",
+            "domainsid": "Domainsid",
+            "ipaddress": "IPAddress",
+            "port": "Port",
+            "issecure": "Secure Ldap",
+            "userbasedn": "UserBaseDN",
+            "groupbasedn": "GroupBaseDN",
+            "portype": "PortType",
+            "fetchstatus": "Fetchstatus"
+        }
+    }
+}
